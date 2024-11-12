@@ -19,7 +19,7 @@ jobs:
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
                     - name: Cache
-  uses:actions/cache@v4.1.2
+  uses: actions/cache@v4
   with:
     # A list of files, directories, and wildcard patterns to cache and restore
     path: 
